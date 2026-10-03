@@ -12,23 +12,28 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             box-sizing: border-box;
         }
         .container {
-            text-align: center;
+            width: 100%;
             max-width: 600px;
+        }
+        .card {
             border: 1px solid #30363d;
             padding: 40px;
             border-radius: 6px;
             background-color: #161b22;
             box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            text-align: center;
+            margin-bottom: 24px;
         }
         h1 {
             color: #58a6ff;
             font-size: 2.5rem;
+            margin-top: 0;
             margin-bottom: 10px;
             letter-spacing: -0.5px;
         }
@@ -42,28 +47,69 @@
         p {
             font-size: 1.05rem;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
-        .links a {
+        .section-title {
+            font-size: 1rem;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            text-align: left;
+            padding-left: 5px;
+        }
+        .log-container {
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            background-color: #161b22;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .log-entry {
+            text-align: left;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .log-entry:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .log-date {
+            font-size: 0.85rem;
             color: #58a6ff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
+            font-family: monospace;
+            margin-bottom: 5px;
         }
-        .links a:hover {
-            text-decoration: underline;
+        .log-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #c9d1d9;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Current Instance</h1>
-    <div class="subtitle">A Hard Sci-Fi Project</div>
-    <p>System initialized. Exploring the deep architectural limits of space, time, and the mind across substrates. The narrative instance is currently compiling.</p>
-    <div class="links">
-        <a href="https://rettahuerta.com">Portfolio</a>
-        <a href="#">Updates</a>
+    <!-- Main Book Panel -->
+    <div class="card">
+        <h1>Current Instance</h1>
+        <div class="subtitle">A Hard Sci-Fi Project</div>
+        <p>System initialized. Exploring the deep architectural limits of space, time, and consciousness. The narrative instance is currently compiling.</p>
+    </div>
+
+    <!-- Project Logs / Updates Section -->
+    <div class="section-title">Project Logs</div>
+    <div class="log-container">
+        <div class="log-entry">
+            <div class="log-date">[INSTANCE_LOG // 2026.10.03]</div>
+            <div class="log-text">Core layout deployed. Shifting server tracking over to localized project repositories to enforce network anonymity protocols. Core framework architecture finalized.</div>
+        </div>
+        <div class="log-entry">
+            <div class="log-date">[INSTANCE_LOG // 2026.09.30]</div>
+            <div class="log-text">Domain environment initialized on isolated node routing. Initial processing sequences active.</div>
+        </div>
     </div>
 </div>
 
